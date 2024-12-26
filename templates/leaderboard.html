@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Leaderboard</h1>
+        <ul class="leaderboard">
+            {% for score in scores %}
+                <li>{{ score.attempts }} attempts</li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn">Play Again</a>
+    </div>
+</body>
+</html>
